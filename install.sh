@@ -2,7 +2,8 @@
 home=~
 vimrc=$home'/.vimrc'
 path=$home'/.vim/bundle'
-config='./airline.txt'
+curr=$(pwd)
+config=$pwd'/airline.txt'
 cd ~
 if [ -e $vimrc ]
 then
