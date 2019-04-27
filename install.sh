@@ -32,14 +32,17 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
          echo " NeoBundle      'vim-airline/vim-airline.git'" >> $vimrc
          echo " NeoBundle      'chr4/nginx.vim'" >> $vimrc
          echo " NeoBundle      'scrooloose/nerdtree.git'" >> $vimrc
+         echo " NeoBundle 'vim-airline/vim-airline-themes'" >> $vimrc
+         
          echo "call neobundle#end()
                filetype plugin indent on
                NeoBundleCheck" >> $vimrc
 
         echo '"---------------airline options------------------------' >> $vimrc
         echo 'let g:airline#extensions#tabline#enabled=1 "顶部tab显示"' >> $vimrc
-        sed -n '193,195p' $config >> ~/.vimrc
-        sed -n '216,223p' $config >> ~/.vimrc
+        sed -n '193,195p' $config >> $vimrc
+        sed -n '216,223p' $config >> $vimrc
+        echo "  let g:airline_theme='murmur'" >> $vimrc
         echo '"---------------nmap options-------------------------------------' >> $vimrc
         echo ' nmap <F5> :NERDTree<cr>
                nmap <tab> :bn<cr>
